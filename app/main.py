@@ -14,7 +14,7 @@ import aiofiles
 import sys
 sys.path.insert(0, str(Path(__file__).parent))
 
-from corrector.thesis_corrector import ThesisCorrector
+from corrector.thesis_corrector import ThesisCorrector, PageNumberingConfig
 
 app = FastAPI(
     title="Thesis Auto-Corrector",
@@ -59,17 +59,29 @@ async def get_rules():
 
 @app.post("/correct")
 async def correct_thesis(
-    file: UploadFile = File(..., description="Файл дипломной работы (.docx)")
+    file: UploadFile = File(..., description="Файл дипломной работы (.docx)"),
+    doc_type: str = "diploma",
+    start_section: str = "Введение",
+    start_number: int = 0,
 ):
     """
-    Upload a .docx thesis file.
-    Returns: corrected .docx + text correction report.
+    Upload a .docx thesis file and receive a corrected version + report.
+
+    **doc_type** – `diploma` (default) or `magistr`
+
+    **start_section** – The section title where page numbering begins.
+    Default: `Введение`
+
+    **start_number** – The integer printed on that first numbered page.
+    `0` (default) = auto-detect from physical page position.
     """
     if not file.filename.endswith(".docx"):
         raise HTTPException(status_code=400, detail="Только файлы .docx принимаются")
+    if doc_type not in ("diploma", "magistr"):
+        raise HTTPException(status_code=400, detail="doc_type must be 'diploma' or 'magistr'")
 
     job_id = str(uuid.uuid4())[:8]
-    input_path = UPLOAD_DIR / f"{job_id}_input.docx"
+    input_path  = UPLOAD_DIR / f"{job_id}_input.docx"
     output_path = OUTPUT_DIR / f"{job_id}_corrected.docx"
     report_path = OUTPUT_DIR / f"{job_id}_report.txt"
 
@@ -80,7 +92,15 @@ async def correct_thesis(
 
     # Run corrector
     try:
-        corrector = ThesisCorrector(str(RULES_PATH))
+        pn_config = PageNumberingConfig(
+            start_section_name=start_section,
+            start_number=start_number,
+        )
+        corrector = ThesisCorrector(
+            rules_path=str(RULES_PATH),
+            page_numbering_config=pn_config,
+            doc_type=doc_type,
+        )
         report = corrector.correct(str(input_path), str(output_path))
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Ошибка обработки: {str(e)}")
@@ -91,6 +111,11 @@ async def correct_thesis(
 
     return JSONResponse({
         "job_id": job_id,
+        "settings": {
+            "doc_type": doc_type,
+            "page_numbering_starts_at": start_section,
+            "first_page_number": start_number if start_number > 0 else "auto",
+        },
         "violations_total": len(report.violations),
         "auto_fixed": report.auto_fixed_count,
         "manual_review": report.manual_review_count,
