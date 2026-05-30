@@ -1,0 +1,345 @@
+{
+  "_meta": {
+    "source": "ПР V-08-2022",
+    "title": "Общие требования к оформлению текстовых учебных документов и основных надписей",
+    "institution": "НАО «Карагандинский технический университет имени Абылкаса Сагинова»",
+    "version": "01",
+    "date": "2022-11-02",
+    "extracted_by": "Claude AI from PDF",
+    "applicable_to": ["дипломный проект", "дипломная работа", "магистерская диссертация", "курсовая работа", "отчет по НИР", "отчет по ЭИР", "контрольная работа"]
+  },
+
+  "page_layout": {
+    "paper_size": "A4",
+    "paper_size_mm": [210, 297],
+    "paper_size_alternative": "A3 (допускается для таблиц и иллюстраций)",
+    "margins_mm": {
+      "left": 30,
+      "top": 20,
+      "right": 10,
+      "bottom": 25
+    },
+    "single_sided": true,
+    "note": "5.5 — поля по всем четырём сторонам листа"
+  },
+
+  "typography": {
+    "main_body": {
+      "font_family": "Times New Roman",
+      "font_style": "Regular (обычный)",
+      "font_size_pt": 14,
+      "line_spacing": "single (одинарный)",
+      "note": "5.3, п. «с применением печатающих устройств»; дипломная/магистерская — через один интервал, кегль 14"
+    },
+    "tables": {
+      "font_family": "Times New Roman",
+      "font_style": "Regular",
+      "font_size_pt_min": 10,
+      "line_spacing": "single",
+      "row_height_min_mm": 8,
+      "note": "7.5.6"
+    },
+    "allowed_emphasis": "Bold, Italic — для терминов, формул, теорем (допускается)",
+    "color": "чёрный (один цвет на весь документ)",
+    "forbidden": ["цветные пасты", "подчёркивания", "разные цвета в одном документе"]
+  },
+
+  "paragraph_formatting": {
+    "first_line_indent_mm": 7.5,
+    "first_line_indent_characters": 4,
+    "alignment": "по ширине (justify)",
+    "note": "5.5 — абзацный отступ 7.5 мм рукописного / 4-й знак при выводе на ПК"
+  },
+
+  "document_structure": {
+    "required_elements_diploma": [
+      "обложка (Приложение А)",
+      "титульный лист (Приложение Б)",
+      "задание (Приложение Д)",
+      "аннотация",
+      "содержание",
+      "нормативные ссылки",
+      "определения",
+      "обозначения и сокращения",
+      "введение",
+      "основная часть",
+      "заключение (выводы)",
+      "список использованной литературы",
+      "приложение (при необходимости)"
+    ],
+    "required_elements_magistr": [
+      "титульный лист (Приложение К)",
+      "резюме (1 страница, на казахском или русском языке)",
+      "содержание с указанием страниц",
+      "перечень обозначений и сокращений (при необходимости)",
+      "введение",
+      "основная часть",
+      "заключение",
+      "список использованной литературы",
+      "приложение (при необходимости)"
+    ],
+    "structural_headings_no_numbering": [
+      "Содержание", "Нормативные ссылки", "Определения",
+      "Обозначения и сокращения", "Введение", "Заключение",
+      "Список использованной литературы"
+    ],
+    "note": "5.8, 5.11, 5.13"
+  },
+
+  "page_numbering": {
+    "style": "arabic (арабские цифры)",
+    "position": "centre bottom (в центре нижней части листа)",
+    "no_dot_after_number": true,
+    "title_page_included_in_count": true,
+    "title_page_number_not_printed": true,
+    "numbering_starts_from_page": "Введение (стр. 2 раздела)",
+    "appendices_included": true,
+    "bibliography_included": true,
+    "note": "7.1.15"
+  },
+
+  "headings": {
+    "sections": {
+      "numbering": "арабские цифры без точки в конце номера",
+      "example": "1, 2, 3 ...",
+      "indent": "с абзацного отступа",
+      "case": "с прописной буквы",
+      "no_dot_at_end": true,
+      "no_hyphenation": true,
+      "bold_allowed": true,
+      "on_new_page": "рекомендуется начинать каждый раздел с нового листа",
+      "note": "7.1.2, 7.1.10, 7.1.11"
+    },
+    "subsections": {
+      "numbering": "X.Y (номер раздела + точка + номер подраздела)",
+      "example": "1.1, 1.2, 2.1 ...",
+      "no_dot_at_end": true,
+      "bold_allowed": true,
+      "spacing_before_mm_handwritten": 16,
+      "spacing_before_pc": "2 ввода от предыдущего текста",
+      "note": "7.1.2, 7.1.10"
+    },
+    "points": {
+      "numbering": "X.Y.Z или X.Z (если нет подразделов)",
+      "no_title_usually": true,
+      "note": "7.1.3, 7.1.10"
+    },
+    "spacing": {
+      "between_heading_and_text_pc": "1 ввод",
+      "between_heading_and_subheading_pc": "1 ввод",
+      "note": "7.1.10"
+    },
+    "no_heading_break_across_pages": true,
+    "heading_with_following_text_on_same_page": true
+  },
+
+  "lists_enumerations": {
+    "lettered_list": {
+      "marker": "строчная буква русского алфавита + )",
+      "excluded_letters": ["ё", "з", "й", "о", "ч", "ь", "ы", "ъ"],
+      "indent": "абзацный отступ только в первой строке",
+      "note": "7.1.7, 7.1.8"
+    },
+    "numbered_sublist": {
+      "marker": "арабская цифра + )",
+      "indent": "2 знака правее букв",
+      "note": "7.1.8"
+    },
+    "dash_list": {
+      "marker": "–",
+      "when_no_references_needed": true,
+      "note": "7.1.8"
+    },
+    "each_item_starts_with_indent": true,
+    "note": "7.1.9"
+  },
+
+  "illustrations": {
+    "numbering": {
+      "default": "сквозная арабскими цифрами",
+      "single_figure": "Рисунок 1",
+      "per_section_allowed": true,
+      "per_section_format": "Рисунок X.Y (раздел.номер)",
+      "appendix_format": "Рисунок А.3 (обозначение приложения + номер)",
+      "note": "7.3.1"
+    },
+    "caption": {
+      "position": "под рисунком",
+      "format": "Рисунок N – Наименование",
+      "alignment": "по центру",
+      "note": "7.3.1"
+    },
+    "reference_in_text_required": true,
+    "reference_format_sequential": "в соответствии с рисунком 2",
+    "reference_format_section": "в соответствии с рисунком 1.2",
+    "color": "чёрный",
+    "separation_from_text_pc": "1 ввод",
+    "separation_from_text_handwritten_mm": 8,
+    "note": "7.3.1, 7.3.3"
+  },
+
+  "tables": {
+    "numbering": {
+      "default": "сквозная арабскими цифрами",
+      "single_table": "Таблица 1",
+      "per_section_allowed": true,
+      "per_section_format": "Таблица X.Y",
+      "appendix_format": "Таблица В.1",
+      "note": "7.5.3"
+    },
+    "caption": {
+      "position": "над таблицей",
+      "format": "Таблица N – Наименование",
+      "alignment": "с абзацного отступа",
+      "separation_from_table_pc": "1 ввод",
+      "separation_from_table_handwritten_mm": 8,
+      "note": "7.5.1"
+    },
+    "placement": "непосредственно после текста, в котором упоминается, или на следующей странице",
+    "separation_from_text_pc": "1 ввод",
+    "separation_from_text_handwritten_mm": 8,
+    "reference_in_text_required": true,
+    "reference_format": "Таблица N (с заглавной буквы)",
+    "column_headers_case": "с прописной буквы",
+    "subcolumn_headers_case": "со строчной (если продолжают заголовок) или с прописной (если самостоятельные)",
+    "no_dot_after_header": true,
+    "no_diagonal_dividers": true,
+    "no_ordinal_number_column": true,
+    "continuation_label": "Продолжение таблицы N",
+    "row_height_min_mm": 8,
+    "font_min_pt": 10,
+    "note": "7.5.1–7.5.24"
+  },
+
+  "formulas": {
+    "numbering": "сквозная арабскими цифрами в круглых скобках справа",
+    "single_formula": "(1)",
+    "per_section_allowed": true,
+    "per_section_format": "(X.Y)",
+    "appendix_format": "(В.1)",
+    "placement": "на отдельной строке",
+    "blank_line_above": true,
+    "blank_line_below": true,
+    "line_break_at": ["=", "+", "–", "×", ":", "другие математические знаки"],
+    "sign_repeated_at_start_of_next_line": true,
+    "symbol_explanation": {
+      "starts_with": "где",
+      "no_colon_after_where": true,
+      "no_indent_before_where": true,
+      "each_symbol_on_new_line": true
+    },
+    "reference_in_text_format": "в формуле (1)",
+    "note": "7.2.15–7.2.19"
+  },
+
+  "bibliography": {
+    "standard": "ГОСТ 7.32",
+    "ordering": "по порядку появления ссылок в тексте документа",
+    "citation_format_in_text": "[N] (в квадратных скобках)",
+    "citation_example": "[26]",
+    "book_fields": ["автор (Фамилия И.О.)", "заглавие", "повторность издания", "место издания", "год", "том/выпуск", "страниц"],
+    "article_fields": ["автор", "заглавие статьи", "наименование журнала", "год", "том", "номер журнала", "страницы"],
+    "standard_fields": ["обозначение", "наименование"],
+    "place_of_publication": "в именительном падеже полностью",
+    "author_case": "именительный падеж",
+    "note": "7.1.18, 7.1.19.1–7.1.19.9; пример — Приложение П"
+  },
+
+  "appendices": {
+    "designation": "заглавные буквы русского алфавита (А, Б, В, …), кроме Ё, З, Й, О, Ч, Ь, Ы, Ъ",
+    "if_letters_exhausted": "арабские цифры (Приложение 1, 2, …)",
+    "single_appendix": "Приложение А",
+    "starts_on_new_page": true,
+    "header_format": "Приложение X (посередине страницы)",
+    "status_line": "(обязательное) / (рекомендуемое) / (справочное)",
+    "title_on_separate_line": "симметрично тексту с прописной буквы",
+    "references_in_text_required": true,
+    "ordering_in_toc_required": true,
+    "page_numbering_continuous": true,
+    "inner_numbering_prefix": "обозначение приложения (А.1, А.2, …)",
+    "paper_size": "А4, допускается А3, А4х3, А4х4, А2, А1 по ГОСТ 2.301",
+    "note": "7.3.4–7.3.10"
+  },
+
+  "footnotes": {
+    "marker": "арабская цифра со скобкой (надстрочный знак)",
+    "alternative_marker": "звёздочка (не более 4)",
+    "position": "в конце страницы с абзацного отступа, отделяется короткой горизонтальной линией слева",
+    "numbering": "отдельная для каждой страницы",
+    "table_footnotes_position": "в конце таблицы над нижней линией",
+    "note": "7.6.1–7.6.3"
+  },
+
+  "notes_and_examples": {
+    "note_single": "Слово «Примечание» + тире + текст с прописной буквы (с абзаца вразрядку, не подчёркивать)",
+    "note_multiple": "«Примечание 1», «Примечание 2», нумерация арабскими цифрами",
+    "placement": "непосредственно после материала, к которому относится",
+    "table_notes_position": "в конце таблицы над нижней линией",
+    "example_prefix": "Пример (слово в начале строки)",
+    "multiple_examples": "Пример 1, Пример 2 …",
+    "note": "7.2.20–7.2.23"
+  },
+
+  "text_style_rules": {
+    "forbidden_in_text": [
+      "разговорная речь, техницизмы, профессионализмы",
+      "синонимичные термины для одного понятия",
+      "иностранные слова при наличии русских эквивалентов",
+      "произвольные словообразования",
+      "несанкционированные сокращения",
+      "математические знаки без числовых значений (>, <, =, ≥, ≤, ≠, №, %)",
+      "знак «–» для минуса (писать слово «минус»)",
+      "знак «Ø» для диаметра в тексте (писать слово «диаметр»)"
+    ],
+    "numbers_in_text": {
+      "with_units": "цифрами",
+      "without_units_1_to_9": "словами",
+      "fractions": "десятичные дроби (0.5, не 1/2)",
+      "ranges": "от X до Y (если с единицами) или через дефис (если порядковые номера)"
+    },
+    "physical_units": "по ГОСТ 8.417 (системы СИ)",
+    "note": "7.2.2–7.2.14"
+  },
+
+  "title_page": {
+    "paper": "А4",
+    "diploma_project_form": "Приложение Б",
+    "course_work_form": "Приложение В",
+    "control_work_form": "Приложение Г",
+    "magistr_form": "Приложение К",
+    "phd_form": "Приложение Н",
+    "fields": {
+      "1": "наименование ВУЗа",
+      "2": "допуск к защите / гриф утверждения",
+      "3": "наименование документа крупным шрифтом",
+      "4": "шифр и наименование образовательной программы",
+      "5": "подписи разработчиков + оценка",
+      "6": "год (без слова «год» или «г.»)"
+    },
+    "cover_mandatory_for_diploma": true,
+    "cover_form": "Приложение А",
+    "note": "8.1–8.3"
+  },
+
+  "cross_references": {
+    "to_figures": "в соответствии с рисунком N",
+    "to_tables": "Таблица N (с заглавной буквы)",
+    "to_formulas": "в формуле (N)",
+    "to_sections_subsections": "раздел N / подраздел N.M",
+    "to_appendices": "Приложение X",
+    "no_reference_to_subsections_of_other_docs": true,
+    "note": "7.2.24"
+  },
+
+  "volume_limits": {
+    "diploma_technical_max_pages": 70,
+    "diploma_humanitarian_max_pages": 120,
+    "note": "6.8"
+  },
+
+  "corrections_allowed": {
+    "method": "подчистка или закрашивание белой краской + нанесение исправленного текста",
+    "forbidden": ["помарки", "следы удалённого текста", "повреждения листов"],
+    "note": "5.6"
+  }
+}
